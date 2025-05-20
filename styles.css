@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset some default styles */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Default body styles (for home page) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9e3d6; /* Optional: Add a background color */
+}
+
+/* Override body styles for the gallery page */
+body.gallery-page {
+    display: block; /* Change flex to block for vertical stacking */
+    height: auto; /* Allow the page to grow with content */
+    padding: 20px; /* Add some padding around the content */
+}
+
+/* Container to hold all elements (for home page) */
+.container {
+    text-align: center;
+}
+
+/* Title styling */
+.title {
+    font-family: Fascinate, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Optional: Adjust the color */
+}
+
+/* Little Me PNG styling */
+.little-me {
+    width: 124px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+    top: 44.7px; /* Adjust overlap as needed */
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button styling */
+.button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #FFFFFF; /* Blue color, adjust as needed */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e2d5c6; /* Darker blue on hover */
+}
+
+/* Gallery Title */
+.gallery-title {
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Adjust the font size */
+    margin: 20px 0; /* Add some space above and below the title */
+    color: #333; /* Set the text color */
+    font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+.gallery-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+/* Gallery Container */
+.gallery {
+    column-count: 3; /* 3 columns on desktop */
+    column-gap: 30px; /* Consistent 30px gap between columns */
+    padding: 20px; /* Optional: Add padding around the gallery */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* For tablets: 2 columns */
+@media (max-width: 1024px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+/* For mobile: 1 column */
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+/* Style for images and videos */
+.gallery img,
+.gallery video {
+    width: 100%; /* Make images and videos responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 30px; /* Add gap between items */
+    display: block; /* Ensure no extra space below inline elements */
+    break-inside: avoid; /* Prevent items from breaking across columns */
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
