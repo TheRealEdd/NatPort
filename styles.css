@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e9e3d6; /* Optional: Add a background color */
+    background-color: #b5beaf; /* Optional: Add a background color */
 }
 
 /* Override body styles for the gallery page */
@@ -29,14 +29,6 @@ body.gallery-page {
 /* Container to hold all elements (for home page) */
 .container {
     text-align: center;
-}
-
-/* Title styling */
-.title {
-    font-family: Fascinate, sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333; /* Optional: Adjust the color */
 }
 
 /* Little Me PNG styling */
@@ -55,16 +47,6 @@ body.gallery-page {
     gap: 10px; /* Space between buttons */
 }
 
-/* Button styling */
-.button {
-    padding: 15px 30px;
-    font-size: 1rem;
-    color: #333;
-    background-color: #FFFFFF; /* Blue color, adjust as needed */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
 .button:hover {
     background-color: #e2d5c6; /* Darker blue on hover */
@@ -76,7 +58,7 @@ body.gallery-page {
     font-size: 2.5rem; /* Adjust the font size */
     margin: 20px 0; /* Add some space above and below the title */
     color: #333; /* Set the text color */
-    font-family: Arial, sans-serif; /* Use a clean font */
+    font-family: 'Times New Roman', Times, serif; /* Use a clean font */
 }
 
 .gallery-subtitle {
@@ -85,6 +67,20 @@ body.gallery-page {
     color: #666;
     margin-bottom: 30px;
 }
+
+.showreel {
+    max-width: 1200px; /* Match the max-width of the gallery */
+    margin: 0 auto; /* Center the showreel like the gallery */
+    width: 100%; /* Ensure it takes the full width available */
+    
+}
+
+.showreel video {
+    width: 100%;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    
+}
+
 /* Gallery Container */
 .gallery {
     column-count: 3; /* 3 columns on desktop */
@@ -124,7 +120,8 @@ body.gallery-page {
     width: fit-content;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #007BFF;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #587730;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -132,5 +129,5 @@ body.gallery-page {
 }
 
 .back-button:hover {
-    background-color: #0056b3;
+    background-color: #82a357;
 }
