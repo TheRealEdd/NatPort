@@ -3,11 +3,16 @@ html {
 }
 
 /* Reset some default styles */
-body, h1, button {
+body, h1, h2, button {
     margin: 0;
     padding: 0;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
 }
 
 /* Default body styles (for home page) */
@@ -25,6 +30,127 @@ body.gallery-page {
     height: auto; /* Allow the page to grow with content */
     padding: 20px; /* Add some padding around the content */
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#contactButton {
+    cursor: pointer;
+}
+
+.overlay {
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1000; /* On top of other content */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Fade in effect */
+}
+
+.overlay.show {
+    opacity: 1; /* Fade in */
+    pointer-events: auto;
+}
+
+.contact-card {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, 0) rotate(30deg);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* On top of the overlay */
+    width: 500px; /* Set a width for the card */
+    height: auto;
+    animation: slideUp 0.5s ease forwards; /* Slide up animation */
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: 1fr; /* Use auto for rows */
+    gap: 50px; /* Optional: space between grid items */
+    padding: 30px;
+}
+
+.image-container {
+    position: relative; /* Position relative for absolute children */
+    width: 100%; /* Full width */
+    padding-top: 100%; /* This creates a square aspect ratio */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 50%; /* Make it circular */
+    grid-column: 1; /* Place in the first column */
+}
+.contact-image {
+    position: absolute; /* Position absolute to fill the square */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill the width of the square */
+    height: 100%; /* Fill the height of the square */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    margin-right: 10px; /* Space to the right */
+}
+
+.name-section {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    grid-column: 2; /* Place in the second column */
+    margin-bottom: 20px;
+}
+
+#email-button {
+    width: fit-content;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #587730;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: 2; /* Place in the second column */
+}
+
+.email-button:hover {
+    background-color: #82a357;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 100%); /* Start below the screen */
+        opacity: 0; /* Start hidden */
+    }
+    60% {
+        transform: translate(-50%, -10%); /* Bounce effect */
+    }
+    100% {
+        transform: translate(-50%, 0); /* End position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
 
 /* Container to hold all elements (for home page) */
 .container {
@@ -65,7 +191,13 @@ body.gallery-page {
     text-align: center;
     font-size: 1.2rem;
     color: #666;
-    margin-bottom: 30px;
+    margin: 20px 10px 30px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.subButtons {
+    margin: 0 10px 0 10px;
 }
 
 .showreel {
@@ -102,6 +234,21 @@ body.gallery-page {
     .gallery {
         column-count: 1;
     }
+    .contact-card {
+        max-width: 300px;
+    }
+    .card-content {
+        display: block;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .name-section {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
 }
 
 /* Style for images and videos */

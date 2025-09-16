@@ -9,8 +9,31 @@
 </head>
 <body class="gallery-page" id="pageTop">
     <h1 class="gallery-title">Natalie van Wingerden</h1>
-    <p class="gallery-subtitle">Illustration | Animation</p>
+    <div class="gallery-subtitle">
+        <h2 class="subButtons">Illustration | Animation</h2>
+        <h2 class="subButtons" id="contactButton">Contact</h2>
+    </div>
 
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Contact Card -->
+    <div id="contactCard" class="contact-card">
+        <span class="close" id="closeButton">&times;</span>
+        <div class="card-content">
+            <div class="image-container">
+                <img src="media/pf1.jpg" alt="Contact Image" class="contact-image">
+            </div>
+            <div class="gridRight">
+                <div class="name-section">Natalie van Wingerden</div>
+                <button id="email-button">Email Me</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Gallery -->
     <div class="showreel">
         <video controls autoplay loop muted playsinline>
                 <source src="media/Animation reel Natalia Justine Elisabeth van Wingerden v2.mp4" type="video/mp4">
@@ -87,4 +110,5 @@
 
     <a href="#pageTop" class="back-button">Back to Top</a>
 </body>
+<script src="contact.js"></script>
 </html>
